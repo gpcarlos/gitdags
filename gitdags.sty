@@ -101,7 +101,7 @@
     minimum height               = 1.6em,
     minimum width                = 2em,
     draw                         = solarized-base01,
-    fill                         = solarized-green!20,
+    fill                         = solarized-green!30,
     very thick,
   },
   graphs/DAG/.style={
@@ -145,8 +145,9 @@
   highlighted commit/.style={
     DAGcommit,
     reset preaction,
-    fill opacity = 0,
-    draw         = solarized-base02,
+    drop shadow   = {opacity=0.15},
+    draw         = solarized-base01,
+    fill         = solarized-cyan!30,
   },
   problematic commits/.style={
     reset preaction,
@@ -213,7 +214,7 @@
   \fi
   \node[
     DAGref,
-    fill = solarized-blue!20,
+    fill = solarized-blue!30,
   ] (\nodename@gitdags) [#3] {#2};
   \draw[DAGrefedge] (#4) -- (\nodename@gitdags);
 }
@@ -226,7 +227,7 @@
   \fi
   \node[
     DAGref,
-    fill = solarized-magenta!20,
+    fill = solarized-magenta!30,
   ] (\nodename@gitdags) [#3] {#2};
   \draw[DAGrefedge] (#4) -- (\nodename@gitdags);
 }
@@ -235,7 +236,7 @@
 \newcommand\gitHEAD[2]{%
   \node[
     DAGref,
-    fill          = solarized-red!20,
+    fill          = solarized-red!30,
     node distance = 1em,
   ] (gitHEAD) [#1] {HEAD};
   \draw[DAGrefedge] (#2) -- (gitHEAD);
